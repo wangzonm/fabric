@@ -38,7 +38,7 @@ type BCCSPFactory interface {
 	Get(opts *FactoryOpts) (bccsp.BCCSP, error)
 }
 
-// GetDefault returns a non-ephemeral (long-term) BCCSP
+// GetDefault returns a non-ephemeral (long-term) BCCSPF
 func GetDefault() bccsp.BCCSP {
 	if defaultBCCSP == nil {
 		logger.Debug("Before using BCCSP, please call InitFactories(). Falling back to bootBCCSP.")
